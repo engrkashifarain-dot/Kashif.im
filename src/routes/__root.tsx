@@ -79,11 +79,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Muhammad Kashif — Technology Governance & Enterprise Architecture" },
+      { title: "Muhammad Kashif — Enterprise Technology Leader" },
       {
         name: "description",
         content:
-          "Muhammad Kashif advises institutions on technology governance, enterprise architecture, and responsible digital modernization.",
+          "Enterprise technology leader with 15+ years across government and industry. Focused on IT infrastructure, business continuity, and technology governance.",
       },
       { name: "author", content: "Muhammad Kashif" },
       { property: "og:site_name", content: "Muhammad Kashif" },
@@ -100,7 +100,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap",
       },
     ],
     scripts: [
