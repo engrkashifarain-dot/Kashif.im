@@ -5,7 +5,7 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact — Muhammad Kashif" },
-      { name: "description", content: "Begin an inquiry regarding governance, enterprise architecture, consulting, speaking, or collaboration." },
+      { name: "description", content: "Get in touch with Muhammad Kashif about roles, projects, consulting, or a conversation about technology governance." },
       { property: "og:title", content: "Contact — Muhammad Kashif" },
       { property: "og:url", content: "/contact" },
     ],
@@ -13,56 +13,69 @@ export const Route = createFileRoute("/contact")({
   }),
 });
 
-const intents = [
-  { label: "Technology Governance", subject: "Inquiry — Technology Governance" },
-  { label: "Enterprise Architecture", subject: "Inquiry — Enterprise Architecture" },
-  { label: "Consulting Engagement", subject: "Inquiry — Consulting Engagement" },
-  { label: "Speaking", subject: "Inquiry — Speaking" },
-  { label: "Collaboration", subject: "Inquiry — Collaboration" },
-  { label: "General", subject: "Inquiry — General" },
+const reasons = [
+  { label: "A role or opportunity", subject: "Opportunity — for Muhammad Kashif", hint: "Full-time, contract, or advisory positions." },
+  { label: "A consulting or advisory project", subject: "Consulting inquiry — Muhammad Kashif", hint: "Short engagements around governance, DR, or infrastructure." },
+  { label: "A speaking or panel invitation", subject: "Speaking invitation — Muhammad Kashif", hint: "Meetups, university sessions, industry panels." },
+  { label: "Just a professional conversation", subject: "Hello — professional conversation", hint: "Happy to talk about the industry or share notes." },
 ];
 
 function Contact() {
   return (
-    <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
-      <header className="max-w-3xl border-b border-border pb-12">
+    <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+      <header className="max-w-3xl">
         <p className="eyebrow">Contact</p>
-        <h1 className="mt-4 font-serif text-4xl leading-tight md:text-5xl">A considered inquiry.</h1>
-        <p className="mt-6 text-lg leading-relaxed text-foreground/80">
-          Choose the intent that best fits your question. Each opens a drafted email so
-          a conversation begins with a clear subject and context.
+        <h1 className="mt-3 text-4xl font-semibold leading-tight tracking-tight md:text-5xl">Let&apos;s talk.</h1>
+        <p className="mt-5 text-lg leading-relaxed text-foreground/75">
+          The easiest way to reach me is email or LinkedIn. If you want, pick
+          the option that best describes what you have in mind — it opens a
+          pre-filled email so we start with a clear subject.
         </p>
       </header>
-      <div className="mt-14 grid gap-14 md:grid-cols-12">
-        <div className="md:col-span-8">
-          <p className="eyebrow">By intent</p>
-          <ul className="mt-6 divide-y divide-border border-t border-border">
-            {intents.map((i) => (
-              <li key={i.label}>
-                <a href={`mailto:Engr.KashifArain@gmail.com?subject=${encodeURIComponent(i.subject)}`} className="group flex items-center justify-between gap-6 py-6 transition-colors hover:bg-secondary/60">
-                  <span className="font-serif text-2xl md:text-3xl">{i.label}</span>
-                  <span className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground group-hover:text-accent">Begin →</span>
+
+      <div className="mt-14 grid gap-10 md:grid-cols-12">
+        <div className="md:col-span-7">
+          <p className="eyebrow">What&apos;s this about?</p>
+          <ul className="mt-6 space-y-3">
+            {reasons.map((r) => (
+              <li key={r.label}>
+                <a
+                  href={`mailto:Engr.KashifArain@gmail.com?subject=${encodeURIComponent(r.subject)}`}
+                  className="group flex items-center justify-between gap-6 rounded-lg border border-border bg-card px-5 py-4 transition-colors hover:border-accent"
+                >
+                  <div>
+                    <p className="text-base font-semibold text-primary group-hover:text-accent">{r.label}</p>
+                    <p className="mt-1 text-sm text-muted-foreground">{r.hint}</p>
+                  </div>
+                  <span aria-hidden className="font-mono text-sm text-muted-foreground group-hover:text-accent">→</span>
                 </a>
               </li>
             ))}
           </ul>
         </div>
-        <aside className="md:col-span-4 space-y-10">
-          <div>
+
+        <aside className="md:col-span-5 space-y-6">
+          <div className="rounded-lg border border-border bg-secondary/40 p-6">
             <p className="eyebrow">Direct</p>
-            <ul className="mt-4 space-y-2 text-[15px]">
-              <li><a href="mailto:Engr.KashifArain@gmail.com" className="underline-offset-4 hover:underline">Engr.KashifArain@gmail.com</a></li>
-              <li><a href="https://linkedin.com/in/kashifarain" target="_blank" rel="noreferrer" className="underline-offset-4 hover:underline">linkedin.com/in/kashifarain ↗</a></li>
+            <ul className="mt-4 space-y-3 text-[15px]">
+              <li>
+                <p className="text-xs uppercase tracking-wide text-muted-foreground">Email</p>
+                <a href="mailto:Engr.KashifArain@gmail.com" className="font-medium text-primary underline-offset-4 hover:text-accent hover:underline">Engr.KashifArain@gmail.com</a>
+              </li>
+              <li>
+                <p className="text-xs uppercase tracking-wide text-muted-foreground">LinkedIn</p>
+                <a href="https://linkedin.com/in/kashifarain" target="_blank" rel="noreferrer" className="font-medium text-primary underline-offset-4 hover:text-accent hover:underline">linkedin.com/in/kashifarain ↗</a>
+              </li>
             </ul>
           </div>
-          <div>
+          <div className="rounded-lg border border-border p-6">
             <p className="eyebrow">Based in</p>
-            <p className="mt-3 text-[15px]">Hyderabad, Sindh · Pakistan</p>
-            <p className="mt-1 text-xs text-muted-foreground">Available for engagements across Pakistan, the Gulf, and international advisory.</p>
+            <p className="mt-2 text-[15px] font-medium text-primary">Hyderabad, Sindh · Pakistan</p>
+            <p className="mt-1 text-sm text-muted-foreground">Open to roles and projects in Pakistan, the Gulf, and remote engagements internationally.</p>
           </div>
-          <div>
-            <p className="eyebrow">Response</p>
-            <p className="mt-3 text-[15px] text-foreground/80">Every inquiry receives a considered reply, typically within a few business days.</p>
+          <div className="rounded-lg border border-border p-6">
+            <p className="eyebrow">Response time</p>
+            <p className="mt-2 text-sm text-foreground/80">I usually reply within a couple of business days. If it&apos;s urgent, mention it in the subject.</p>
           </div>
         </aside>
       </div>

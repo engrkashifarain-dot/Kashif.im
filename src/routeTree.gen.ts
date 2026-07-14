@@ -9,18 +9,12 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as ThesisRouteImport } from './routes/thesis'
 import { Route as ProfileRouteImport } from './routes/profile'
 import { Route as PracticeRouteImport } from './routes/practice'
 import { Route as CredentialsRouteImport } from './routes/credentials'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as IndexRouteImport } from './routes/index'
 
-const ThesisRoute = ThesisRouteImport.update({
-  id: '/thesis',
-  path: '/thesis',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ProfileRoute = ProfileRouteImport.update({
   id: '/profile',
   path: '/profile',
@@ -53,7 +47,6 @@ export interface FileRoutesByFullPath {
   '/credentials': typeof CredentialsRoute
   '/practice': typeof PracticeRoute
   '/profile': typeof ProfileRoute
-  '/thesis': typeof ThesisRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -61,7 +54,6 @@ export interface FileRoutesByTo {
   '/credentials': typeof CredentialsRoute
   '/practice': typeof PracticeRoute
   '/profile': typeof ProfileRoute
-  '/thesis': typeof ThesisRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -70,27 +62,13 @@ export interface FileRoutesById {
   '/credentials': typeof CredentialsRoute
   '/practice': typeof PracticeRoute
   '/profile': typeof ProfileRoute
-  '/thesis': typeof ThesisRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/contact'
-    | '/credentials'
-    | '/practice'
-    | '/profile'
-    | '/thesis'
+  fullPaths: '/' | '/contact' | '/credentials' | '/practice' | '/profile'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contact' | '/credentials' | '/practice' | '/profile' | '/thesis'
-  id:
-    | '__root__'
-    | '/'
-    | '/contact'
-    | '/credentials'
-    | '/practice'
-    | '/profile'
-    | '/thesis'
+  to: '/' | '/contact' | '/credentials' | '/practice' | '/profile'
+  id: '__root__' | '/' | '/contact' | '/credentials' | '/practice' | '/profile'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -99,18 +77,10 @@ export interface RootRouteChildren {
   CredentialsRoute: typeof CredentialsRoute
   PracticeRoute: typeof PracticeRoute
   ProfileRoute: typeof ProfileRoute
-  ThesisRoute: typeof ThesisRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/thesis': {
-      id: '/thesis'
-      path: '/thesis'
-      fullPath: '/thesis'
-      preLoaderRoute: typeof ThesisRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/profile': {
       id: '/profile'
       path: '/profile'
@@ -155,7 +125,6 @@ const rootRouteChildren: RootRouteChildren = {
   CredentialsRoute: CredentialsRoute,
   PracticeRoute: PracticeRoute,
   ProfileRoute: ProfileRoute,
-  ThesisRoute: ThesisRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

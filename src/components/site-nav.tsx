@@ -5,33 +5,31 @@ const links = [
   { to: "/", label: "Home" },
   { to: "/profile", label: "Profile" },
   { to: "/practice", label: "Practice" },
-  { to: "/thesis", label: "Thesis" },
-  { to: "/credentials", label: "Credentials" },
+  { to: "/credentials", label: "Experience" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
 export function SiteNav() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <Link to="/" className="flex items-center gap-3" aria-label="Muhammad Kashif — home">
-          <span className="font-serif text-lg tracking-tight">Muhammad Kashif</span>
-          <span className="hidden text-[10px] uppercase tracking-[0.2em] text-muted-foreground sm:inline">
-            Governance · Architecture
-          </span>
+          <span className="flex h-8 w-8 items-center justify-center rounded bg-primary text-sm font-semibold text-primary-foreground">MK</span>
+          <span className="text-[15px] font-semibold tracking-tight">Muhammad Kashif</span>
         </Link>
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-7 md:flex" aria-label="Primary">
           {links.slice(1).map((l) => (
             <Link
               key={l.to}
               to={l.to}
-              className="text-sm text-foreground/75 transition-colors hover:text-foreground"
-              activeProps={{ className: "text-foreground" }}
+              className="text-sm font-medium text-foreground/70 transition-colors hover:text-accent"
+              activeProps={{ className: "text-accent" }}
             >
               {l.label}
             </Link>
           ))}
+          <Link to="/contact" className="ml-2 inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-accent">Get in touch</Link>
         </nav>
         <button
           type="button"
