@@ -53,7 +53,7 @@ const areas = [
   {
     n: "04",
     title: "Enterprise Architecture & Modernization",
-    lede: "An area I&apos;m actively building expertise in — the whole estate, not just single systems.",
+    lede: "An area I'm actively building expertise in — the whole estate, not just single systems.",
     body: [
       "Understanding the current-state IT estate and where the pain points are.",
       "Thinking about cloud, hybrid, and on-prem trade-offs honestly.",
