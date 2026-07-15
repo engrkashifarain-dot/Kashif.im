@@ -9,12 +9,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Enterprise technology leader with 15+ years across government and industry. Focused on IT infrastructure, business continuity, and technology governance.",
+          "Enterprise technology leader and engineer with 15+ years across government and enterprise IT. Building on infrastructure, business continuity and governance work.",
       },
       { property: "og:title", content: "Muhammad Kashif — Enterprise Technology Leader" },
       {
         property: "og:description",
-        content: "15+ years across government and enterprise IT. Growing into technology governance and enterprise architecture.",
+        content:
+          "15+ years building and running enterprise technology across government, energy and industry. Growing into governance and enterprise architecture.",
       },
       { property: "og:url", content: "/" },
     ],
@@ -22,71 +23,99 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-const focus = [
+const problems = [
   {
-    title: "IT Infrastructure & Operations",
-    body: "Designing, running, and improving the day-to-day systems large organizations rely on — networks, servers, virtualization, backup, and identity.",
+    title: "Keeping critical systems reliable",
+    body: "Making sure the systems a business depends on stay available, secure and predictable — day after day.",
   },
   {
-    title: "Business Continuity & Disaster Recovery",
-    body: "Helping organizations stay operational when things go wrong. Data centres, DR sites, drills, and the procedures that hold under pressure.",
+    title: "Leading infrastructure modernization",
+    body: "Planning and delivering upgrades to networks, data centres and core platforms without disrupting operations.",
   },
   {
-    title: "Technology Governance",
-    body: "Bringing structure to how technology is planned, procured, and managed — policies, controls, vendor management, and reporting leaders can trust.",
+    title: "Strengthening business continuity",
+    body: "Building the disaster-recovery capability, drills and procedures that hold up when something actually goes wrong.",
   },
   {
-    title: "Enterprise Architecture (growing)",
-    body: "Learning to think about the whole estate, not just individual systems — how to modernize, consolidate, and prepare for cloud and AI responsibly.",
+    title: "Improving how technology is governed",
+    body: "Bringing structure to planning, procurement and vendor management so leaders can make decisions with confidence.",
+  },
+];
+
+const credibility = [
+  ["15+ yrs", "Enterprise & government IT"],
+  ["4 sectors", "Government · Energy · Defence · Enterprise"],
+  ["MBA + BE", "Business and engineering foundation"],
+  ["Team lead", "Operations, projects and vendors"],
+];
+
+const principles = [
+  {
+    n: "01",
+    title: "Technology should serve the business.",
+    body: "Every system, upgrade and policy should have a clear reason tied to what the organization is trying to achieve.",
+  },
+  {
+    n: "02",
+    title: "Governance should make decisions easier.",
+    body: "The right structure removes ambiguity — it should speed leaders up, not add another layer of paperwork.",
+  },
+  {
+    n: "03",
+    title: "Modernization should simplify, not complicate.",
+    body: "A modern estate should be smaller, clearer and easier to run than the one it replaces.",
+  },
+  {
+    n: "04",
+    title: "People make technology work.",
+    body: "The best architecture still depends on the team operating it. I plan for both.",
   },
 ];
 
 const highlights = [
-  { org: "Sui Southern Gas Company", role: "Deputy Manager — IT (DR Site)", years: "2018 — Present", tag: "Energy" },
-  { org: "NACTA, Ministry of Interior", role: "Assistant Director — Technical", years: "2017 — 2018", tag: "National Security" },
-  { org: "Ministry of Defence", role: "Assistant Director — IT", years: "2015 — 2017", tag: "Government" },
-  { org: "Streebo Inc.", role: "Network / System Engineer", years: "2012 — 2015", tag: "Enterprise IT" },
+  { label: "Disaster Recovery Leadership", note: "Running a live DR site for a national utility." },
+  { label: "Tier-II Data Centre", note: "Operations, capacity planning and audits." },
+  { label: "Government Technology", note: "Projects across Interior and Defence ministries." },
+  { label: "Enterprise Infrastructure", note: "Networks, servers, virtualization and identity." },
+  { label: "Vendor & Contract Management", note: "OEMs, SIs and long-term support contracts." },
+  { label: "Technology Planning", note: "Roadmaps, budgets and procurement." },
 ];
 
 function Home() {
   return (
     <div>
+      {/* 1. WHO I AM */}
       <section className="border-b border-border">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 pt-16 pb-20 md:grid-cols-12 md:pt-24 md:pb-24">
-          <div className="md:col-span-8">
+        <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 pt-16 pb-20 md:grid-cols-12 md:pt-28 md:pb-28">
+          <div className="md:col-span-7">
             <p className="eyebrow">Muhammad Kashif · Hyderabad, Pakistan</p>
-            <h1 className="mt-5 text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl md:text-6xl">
-              Enterprise technology leader.
-              <span className="block text-accent">Engineer at heart.</span>
+            <h1 className="mt-5 text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl md:text-[64px]">
+              Enterprise technology,<br className="hidden sm:block" />
+              built to be reliable.
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-foreground/75">
-              I&apos;m Kashif — an engineer and MBA with 15+ years in IT. I&apos;ve
-              spent my career inside government and large enterprise organizations,
-              running infrastructure, disaster-recovery sites, and data-centre
-              projects. Today I&apos;m focused on technology governance and
-              enterprise architecture — helping organizations plan and manage
-              technology better as they modernize.
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-foreground/75">
+              I&apos;m an engineer and MBA with more than fifteen years leading
+              enterprise IT inside government and industry — infrastructure,
+              data centres and business continuity. Today I&apos;m building on
+              that foundation with a focus on governance and enterprise
+              architecture.
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-3">
-              <Link to="/practice" className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-accent">
-                What I do <span aria-hidden>→</span>
+            <div className="mt-9 flex flex-wrap items-center gap-3">
+              <Link to="/contact" className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-accent">
+                Get in touch <span aria-hidden>→</span>
               </Link>
               <Link to="/credentials" className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-5 py-3 text-sm font-medium text-foreground hover:border-accent hover:text-accent">
                 See my experience
               </Link>
-              <a href="https://linkedin.com/in/kashifarain" target="_blank" rel="noreferrer" className="text-sm font-medium text-foreground/70 underline-offset-4 hover:text-accent hover:underline">
-                LinkedIn ↗
-              </a>
             </div>
           </div>
-          <div className="md:col-span-4">
-            <figure className="mx-auto max-w-[260px] md:max-w-none">
-              <div className="relative">
-                <div aria-hidden className="absolute -inset-3 -z-10 rounded-2xl bg-gradient-to-br from-accent/15 to-primary/10 blur-xl" />
+          <div className="md:col-span-5">
+            <figure className="mx-auto max-w-[300px] md:max-w-none">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl ring-1 ring-border">
                 <img
                   src={portrait.url}
                   alt="Portrait of Muhammad Kashif"
-                  className="aspect-square w-full rounded-2xl object-cover object-top grayscale ring-1 ring-border"
+                  className="absolute inset-0 h-full w-full scale-125 object-cover object-[50%_18%] grayscale contrast-[1.05]"
                   loading="eager"
                 />
               </div>
@@ -98,95 +127,155 @@ function Home() {
         </div>
       </section>
 
-      <section className="border-b border-border bg-secondary/40">
-        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-px bg-border md:grid-cols-4">
-          {[
-            ["15+ yrs", "In enterprise & government IT"],
-            ["4 sectors", "Government · Energy · Defence · Enterprise"],
-            ["MBA + BE", "Business + engineering foundation"],
-            ["Pakistan", "Open to regional & remote roles"],
-          ].map(([n, l]) => (
-            <div key={String(l)} className="bg-background px-6 py-7">
-              <div className="text-2xl font-semibold tracking-tight text-primary">{n}</div>
-              <div className="mt-1 text-sm text-muted-foreground">{l}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
+      {/* 2. WHAT I DO */}
       <section className="border-b border-border">
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
-          <div className="max-w-2xl">
-            <p className="eyebrow">What I do</p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-              Practical technology work, from operations to governance.
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-foreground/75">
-              My work sits between engineering and management. I&apos;ve built and run
-              the systems, and I&apos;ve also written the policies, RFPs and SOPs that
-              wrap around them. That combination is what I bring to every role.
-            </p>
-          </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {focus.map((f) => (
-              <article key={f.title} className="rounded-lg border border-border bg-card p-6 transition-colors hover:border-accent">
-                <h3 className="text-lg font-semibold text-primary">{f.title}</h3>
-                <p className="mt-3 text-[15px] leading-relaxed text-foreground/75">{f.body}</p>
-              </article>
-            ))}
-          </div>
-          <div className="mt-10">
-            <Link to="/practice" className="text-sm font-medium text-accent underline-offset-4 hover:underline">
-              See how I approach each area →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="border-b border-border bg-secondary/30">
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
-          <div className="flex flex-wrap items-end justify-between gap-6">
-            <div className="max-w-xl">
-              <p className="eyebrow">Where I&apos;ve worked</p>
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">A career built inside real organizations.</h2>
-              <p className="mt-4 text-base leading-relaxed text-foreground/75">
-                I&apos;ve been fortunate to work in places where technology genuinely
-                matters — a national gas utility, federal ministries, and enterprise
-                IT teams. Each role taught me something different.
+        <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+          <div className="grid gap-10 md:grid-cols-12">
+            <div className="md:col-span-5">
+              <p className="eyebrow">What I do</p>
+              <h2 className="mt-3 text-3xl font-semibold leading-tight tracking-tight md:text-[40px]">
+                I help organizations run technology they can rely on.
+              </h2>
+              <p className="mt-5 text-base leading-relaxed text-foreground/75">
+                Most of my work sits between engineering and management —
+                keeping core systems steady while planning what comes next.
               </p>
             </div>
-            <Link to="/credentials" className="text-sm font-medium text-accent underline-offset-4 hover:underline">Full experience →</Link>
+            <div className="md:col-span-7">
+              <ul className="divide-y divide-border border-y border-border">
+                {problems.map((p) => (
+                  <li key={p.title} className="grid gap-2 py-6 md:grid-cols-12 md:gap-6">
+                    <h3 className="text-[15px] font-semibold text-primary md:col-span-5">{p.title}</h3>
+                    <p className="text-[15px] leading-relaxed text-foreground/75 md:col-span-7">{p.body}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-          <ul className="mt-10 divide-y divide-border overflow-hidden rounded-lg border border-border bg-background">
-            {highlights.map((h) => (
-              <li key={h.org} className="grid gap-2 px-6 py-5 md:grid-cols-12 md:items-center">
-                <p className="font-mono text-xs uppercase tracking-[0.16em] text-muted-foreground md:col-span-2">{h.years}</p>
-                <div className="md:col-span-7">
-                  <p className="text-[15px] font-semibold text-primary">{h.org}</p>
-                  <p className="text-sm text-foreground/70">{h.role}</p>
-                </div>
-                <p className="md:col-span-3 md:text-right">
-                  <span className="inline-flex rounded-full bg-secondary px-3 py-1 text-xs font-medium text-primary">{h.tag}</span>
-                </p>
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
 
+      {/* 3. WHY TRUST ME */}
+      <section className="border-b border-border bg-primary text-primary-foreground">
+        <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
+          <div className="flex flex-wrap items-end justify-between gap-6">
+            <h2 className="max-w-xl text-3xl font-semibold tracking-tight md:text-[40px]">
+              A career built inside real organizations.
+            </h2>
+            <p className="max-w-sm text-sm leading-relaxed text-primary-foreground/70">
+              Government, energy, defence and enterprise IT — the environments
+              where technology has to work every day.
+            </p>
+          </div>
+          <div className="mt-12 grid grid-cols-2 gap-px bg-primary-foreground/10 md:grid-cols-4">
+            {credibility.map(([n, l]) => (
+              <div key={l} className="bg-primary px-6 py-8">
+                <div className="text-3xl font-semibold tracking-tight">{n}</div>
+                <div className="mt-2 text-sm text-primary-foreground/70">{l}</div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 flex flex-wrap gap-2">
+            {[
+              "Business Continuity",
+              "Enterprise Infrastructure",
+              "Data Centre Operations",
+              "Vendor Management",
+              "Technology Planning",
+              "Governance",
+            ].map((t) => (
+              <span key={t} className="rounded-full border border-primary-foreground/20 px-3 py-1 text-xs text-primary-foreground/80">
+                {t}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4. HOW I THINK */}
       <section className="border-b border-border">
+        <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+          <div className="max-w-2xl">
+            <p className="eyebrow">My approach</p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-[40px]">
+              Four ideas that guide the way I work.
+            </h2>
+          </div>
+          <div className="mt-14 grid gap-x-10 gap-y-12 md:grid-cols-2">
+            {principles.map((p) => (
+              <div key={p.n} className="border-t border-border pt-6">
+                <div className="font-mono text-xs tracking-[0.18em] text-accent">{p.n}</div>
+                <h3 className="mt-3 text-xl font-semibold text-primary">{p.title}</h3>
+                <p className="mt-3 text-[15px] leading-relaxed text-foreground/75">{p.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. CAREER DIRECTION */}
+      <section className="border-b border-border bg-secondary/50">
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-12 md:py-24">
           <div className="md:col-span-5">
             <p className="eyebrow">Where I&apos;m heading</p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">Growing into governance and architecture.</h2>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-[40px]">
+              Building on the work, expanding the view.
+            </h2>
           </div>
           <div className="md:col-span-7 space-y-4 text-base leading-relaxed text-foreground/80">
-            <p>I&apos;m at a point in my career where I want to do more than run systems. I want to help organizations decide what technology to build, what to retire, and how to govern the whole picture.</p>
-            <p>That means investing in technology governance, enterprise architecture, and responsible AI adoption — practical skills for the kind of modernization work public and private institutions are taking on right now.</p>
-            <p>If that&apos;s the kind of work you&apos;re thinking about, I&apos;d enjoy a conversation.</p>
-            <div className="pt-2">
-              <Link to="/contact" className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-medium text-primary-foreground hover:bg-accent">Get in touch →</Link>
+            <p>
+              My career so far has been built on enterprise infrastructure,
+              business continuity and day-to-day technology operations.
+            </p>
+            <p>
+              I&apos;m now expanding that experience toward technology
+              governance, enterprise architecture and responsible AI — so I
+              can contribute at a broader strategic level as organizations
+              modernize.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. SELECTED HIGHLIGHTS */}
+      <section className="border-b border-border">
+        <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
+          <div className="flex flex-wrap items-end justify-between gap-6">
+            <div>
+              <p className="eyebrow">Selected highlights</p>
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-[40px]">
+                Work I&apos;ve been responsible for.
+              </h2>
             </div>
+            <Link to="/credentials" className="text-sm font-medium text-accent underline-offset-4 hover:underline">Full experience →</Link>
+          </div>
+          <div className="mt-12 grid gap-px overflow-hidden rounded-lg bg-border sm:grid-cols-2 lg:grid-cols-3">
+            {highlights.map((h) => (
+              <div key={h.label} className="bg-background p-6">
+                <h3 className="text-[15px] font-semibold text-primary">{h.label}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-foreground/70">{h.note}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. CTA */}
+      <section className="border-b border-border">
+        <div className="mx-auto max-w-4xl px-6 py-24 text-center md:py-32">
+          <p className="eyebrow">Let&apos;s talk</p>
+          <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
+            If your organization needs someone with real operational depth and a
+            genuine interest in where technology is heading, I&apos;d be glad to
+            connect.
+          </h2>
+          <div className="mt-10 flex flex-wrap justify-center gap-3">
+            <Link to="/contact" className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-accent">
+              Start a conversation →
+            </Link>
+            <a href="https://linkedin.com/in/kashifarain" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-md border border-border px-6 py-3 text-sm font-medium text-foreground hover:border-accent hover:text-accent">
+              Connect on LinkedIn ↗
+            </a>
           </div>
         </div>
       </section>
