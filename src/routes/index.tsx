@@ -133,7 +133,7 @@ function Home() {
   src={portrait}
   alt="Editorial portrait of Muhammad Kashif"
   className="absolute inset-0 h-full w-full object-cover"
-  style={{ objectPosition: "center 8%" }}
+  style={{ objectPosition: "center 35%" }}
   loading="eager"
 />
               </div>
