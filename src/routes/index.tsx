@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import portrait from "../assets/kashif-portrait.jpg.asset.json";
+import portrait from "../assets/kashif-portrait-color.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -9,13 +9,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Enterprise technology leader and engineer with 15+ years across government and enterprise IT. Building on infrastructure, business continuity and governance work.",
+          "Enterprise technology leader with 15+ years across government and industry. Engineering roots, operational depth, and a deliberate move toward governance and architecture.",
       },
       { property: "og:title", content: "Muhammad Kashif — Enterprise Technology Leader" },
       {
         property: "og:description",
         content:
-          "15+ years building and running enterprise technology across government, energy and industry. Growing into governance and enterprise architecture.",
+          "Engineer, MBA and technology leader with 15+ years across government and enterprise IT. Growing into governance, enterprise architecture and responsible AI.",
       },
       { property: "og:url", content: "/" },
     ],
@@ -23,22 +23,31 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-const problems = [
+const chapters = [
   {
-    title: "Keeping critical systems reliable",
-    body: "Making sure the systems a business depends on stay available, secure and predictable — day after day.",
+    year: "2009",
+    title: "Started as an engineer.",
+    body: "Computer systems engineering at Mehran UET. My first years were spent close to the hardware — networks, servers, the fundamentals.",
   },
   {
-    title: "Leading infrastructure modernization",
-    body: "Planning and delivering upgrades to networks, data centres and core platforms without disrupting operations.",
+    year: "2012",
+    title: "Moved into enterprise IT.",
+    body: "Larger environments, more moving parts. I learned how real organizations depend on the systems most people never see.",
   },
   {
-    title: "Strengthening business continuity",
-    body: "Building the disaster-recovery capability, drills and procedures that hold up when something actually goes wrong.",
+    year: "2016",
+    title: "Took on operational leadership.",
+    body: "Running infrastructure, data centres and business continuity for government and industry. Fewer heroics, more discipline.",
   },
   {
-    title: "Improving how technology is governed",
-    body: "Bringing structure to planning, procurement and vendor management so leaders can make decisions with confidence.",
+    year: "2021",
+    title: "Added the business lens.",
+    body: "Completed an MBA at SZABIST. Started to see technology decisions in terms of strategy, cost and outcomes — not just uptime.",
+  },
+  {
+    year: "Today",
+    title: "Growing toward governance and architecture.",
+    body: "Deepening my work in enterprise architecture, technology governance and responsible AI — the areas I believe define the next decade of enterprise IT.",
   },
 ];
 
@@ -52,23 +61,23 @@ const credibility = [
 const principles = [
   {
     n: "01",
-    title: "Technology should serve the business.",
-    body: "Every system, upgrade and policy should have a clear reason tied to what the organization is trying to achieve.",
+    title: "Technology exists to serve the business.",
+    body: "The best system is the one the organization barely notices — because it quietly does what it was built to do.",
   },
   {
     n: "02",
-    title: "Governance should make decisions easier.",
-    body: "The right structure removes ambiguity — it should speed leaders up, not add another layer of paperwork.",
+    title: "Simpler is almost always better.",
+    body: "A modern estate should be smaller and clearer than the one it replaces. Complexity is a cost, not a feature.",
   },
   {
     n: "03",
-    title: "Modernization should simplify, not complicate.",
-    body: "A modern estate should be smaller, clearer and easier to run than the one it replaces.",
+    title: "Good governance speeds people up.",
+    body: "Structure should remove ambiguity for the people making decisions, not add another layer of paperwork.",
   },
   {
     n: "04",
-    title: "People make technology work.",
-    body: "The best architecture still depends on the team operating it. I plan for both.",
+    title: "People run the technology, not the other way around.",
+    body: "I plan for the team that will operate a system long after the project closes. That is where reliability actually lives.",
   },
 ];
 
@@ -79,6 +88,14 @@ const highlights = [
   { label: "Enterprise Infrastructure", note: "Networks, servers, virtualization and identity." },
   { label: "Vendor & Contract Management", note: "OEMs, SIs and long-term support contracts." },
   { label: "Technology Planning", note: "Roadmaps, budgets and procurement." },
+];
+
+const ahead = [
+  "Enterprise Architecture",
+  "Technology Governance",
+  "Responsible AI",
+  "Technology Strategy",
+  "Digital Transformation",
 ];
 
 function Home() {
