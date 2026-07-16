@@ -71,7 +71,7 @@ function Contact() {
           <div className="rounded-lg border border-border p-6">
             <p className="eyebrow">Based in</p>
             <p className="mt-2 text-[15px] font-medium text-primary">Hyderabad, Sindh · Pakistan</p>
-            <p className="mt-1 text-sm text-muted-foreground">Open to roles and projects in Pakistan, the Gulf, and remote engagements internationally.</p>
+            <p className="mt-1 text-sm text-muted-foreground">Open to international opportunities, including relocation, where I can contribute to enterprise technology, governance, and digital transformation initiatives.</p>
           </div>
           <div className="rounded-lg border border-border p-6">
             <p className="eyebrow">Response time</p>

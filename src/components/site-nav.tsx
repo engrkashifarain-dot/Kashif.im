@@ -29,8 +29,7 @@ export function SiteNav() {
               {l.label}
             </Link>
           ))}
-          <Link to="/contact" className="ml-2 inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-accent">Get in touch</Link>
-        </nav>
+                  </nav>
         <button
           type="button"
           aria-label="Toggle menu"

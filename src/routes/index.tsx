@@ -116,7 +116,7 @@ function Home() {
               infrastructure, data centres and business continuity. I&apos;m
               now growing that work toward enterprise architecture and
               technology governance.
-            </p>
+              </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <Link to="/contact" className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-accent">
                 Get in touch <span aria-hidden>→</span>
@@ -137,9 +137,14 @@ function Home() {
   loading="eager"
 />
               </div>
-              <figcaption className="mt-4 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-                MBA · BE (Computer Systems)
-              </figcaption>
+
+<figcaption className="mt-4 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+  MBA · BE (Computer Systems)
+</figcaption>
+
+<p className="mt-4 text-center text-xs italic text-muted-foreground">
+ “Technology succeeds when people trust it.”
+</p>
             </figure>
           </div>
         </div>
