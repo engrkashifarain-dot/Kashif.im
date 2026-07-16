@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import portrait from "../assets/kashif-portrait-editorial.jpg.asset.json";
+import portrait from "../assets/kashif-home.png";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -130,11 +130,12 @@ function Home() {
             <figure className="mx-auto w-[240px] md:w-[280px]">
               <div className="relative aspect-square overflow-hidden rounded-full ring-1 ring-border/70 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.15)]">
                 <img
-                  src={portrait.url}
-                  alt="Editorial portrait of Muhammad Kashif"
-                  className="absolute inset-0 h-full w-full object-cover object-top"
-                  loading="eager"
-                />
+  src={portrait}
+  alt="Editorial portrait of Muhammad Kashif"
+  className="absolute inset-0 h-full w-full object-cover"
+  style={{ objectPosition: "center 8%" }}
+  loading="eager"
+/>
               </div>
               <figcaption className="mt-4 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
                 MBA · BE (Computer Systems)

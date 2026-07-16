@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import portrait from "../assets/kashif-portrait.jpg.asset.json";
+import portrait from "../assets/kashif-profile.jpg";
 
 export const Route = createFileRoute("/profile")({
   component: Profile,
@@ -20,7 +20,7 @@ function Profile() {
       <header className="grid gap-10 md:grid-cols-12 md:items-center">
         <div className="md:col-span-4">
           <img
-            src={portrait.url}
+            src={portrait}
             alt="Portrait of Muhammad Kashif"
             className="mx-auto aspect-square w-full max-w-[280px] rounded-2xl object-cover object-top grayscale ring-1 ring-border md:max-w-none"
           />
