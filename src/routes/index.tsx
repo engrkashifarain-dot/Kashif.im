@@ -117,7 +117,7 @@ function Home() {
               now growing that work toward enterprise architecture and
               technology governance.
               </p>
-            <div className="mt-9 flex flex-wrap items-center gap-3">
+            <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <Link to="/contact" className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-accent">
                 Get in touch <span aria-hidden>→</span>
               </Link>
