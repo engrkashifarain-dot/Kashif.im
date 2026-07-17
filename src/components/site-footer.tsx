@@ -3,8 +3,8 @@ import { Link } from "@tanstack/react-router";
 export function SiteFooter() {
   const year = new Date().getFullYear();
   return (
-    <footer className="mt-24 border-t border-border bg-secondary/40">
-      <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 sm:grid-cols-2 md:grid-cols-4">
+    <footer className="mt-12 border-t border-border bg-secondary/40">
+      <div className="mx-auto grid max-w-6xl gap-10 px-6 py-10 sm:grid-cols-2 md:grid-cols-4">
         <div className="sm:col-span-2">
           <div className="flex items-center gap-3">
             <span className="flex h-9 w-9 items-center justify-center rounded bg-primary text-sm font-semibold text-primary-foreground">MK</span>
