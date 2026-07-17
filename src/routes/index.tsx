@@ -194,7 +194,7 @@ function Home() {
               where technology has to work every day.
             </p>
           </div>
-          <div className="mt-12 grid grid-cols-2 gap-px bg-primary-foreground/10 md:grid-cols-4">
+          <div className="mt-12 grid grid-cols-1 gap-px bg-primary-foreground/10 sm:grid-cols-2 lg:grid-cols-4">
             {credibility.map(([n, l]) => (
               <div key={l} className="bg-primary px-6 py-8">
                 <div className="text-3xl font-semibold tracking-tight">{n}</div>
