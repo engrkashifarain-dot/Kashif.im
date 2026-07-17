@@ -211,9 +211,12 @@ function Home() {
               "Technology Planning",
               "Governance",
             ].map((t) => (
-              <span key={t} className="rounded-full border border-primary-foreground/20 px-3 py-1 text-xs text-primary-foreground/80">
-                {t}
-              </span>
+              <span
+  key={t}
+  className="flex w-full items-center justify-center rounded-full border border-primary-foreground/20 px-3 py-2 text-center text-xs text-primary-foreground/80"
+>
+  {t}
+</span>
             ))}
           </div>
         </div>
