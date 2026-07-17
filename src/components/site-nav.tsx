@@ -13,17 +13,16 @@ export function SiteNav() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <Link to="/" className="flex items-center gap-3" aria-label="Muhammad Kashif — home">
           <span className="flex h-8 w-8 items-center justify-center rounded bg-primary text-sm font-semibold text-primary-foreground">MK</span>
-          <span className="text-[15px] font-semibold tracking-tight">Muhammad Kashif</span>
+          <span className="text-[13px] sm:text-[15px] font-semibold tracking-tight">Muhammad Kashif</span>
         </Link>
         <nav
-  className="flex items-center gap-3 sm:gap-5 md:gap-7"
+  className="flex items-center gap-2 sm:gap-5 md:gap-7"
   aria-label="Primary">
           {links.slice(1).map((l) => (
             <Link
               key={l.to}
               to={l.to}
-              className="text-xs sm:text-sm font-medium text-foreground/70 transition-colors hover:text-accent whitespace-nowrap"
-              activeProps={{ className: "text-accent" }}
+              className="text-[11px] sm:text-sm font-medium whitespace-nowrap text-foreground/70 transition-colors hover:text-accent"
             >
               {l.label}
             </Link>

@@ -107,7 +107,7 @@ function Home() {
           <div className="md:col-span-8">
             <p className="eyebrow">Muhammad Kashif · Hyderabad, Pakistan</p>
             <h1 className="mt-5 text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl md:text-[60px]">
-              Fifteen years of quiet,<br className="hidden sm:block" />
+              Fifteen years of quiet, <br className="hidden sm:block" />
               reliable technology work.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-foreground/75">
