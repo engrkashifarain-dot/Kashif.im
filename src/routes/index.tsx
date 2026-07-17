@@ -152,7 +152,7 @@ function Home() {
 
       {/* 2. THE JOURNEY */}
       <section className="border-b border-border">
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
+        <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
           <div className="grid gap-12 md:grid-cols-12">
             <div className="md:col-span-4">
               <p className="eyebrow">The journey</p>
@@ -184,7 +184,7 @@ function Home() {
 
       {/* 3. WHY TRUST ME */}
       <section className="border-b border-border bg-primary text-primary-foreground">
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
+        <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <h2 className="max-w-xl text-3xl font-semibold tracking-tight md:text-[40px]">
               A career built inside real organizations.
@@ -224,7 +224,7 @@ function Home() {
 
       {/* 4. HOW I THINK */}
       <section className="border-b border-border">
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
+        <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
           <div className="max-w-2xl">
             <p className="eyebrow">What I believe</p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-[40px]">
@@ -249,7 +249,7 @@ function Home() {
 
       {/* 5. WHERE I'M HEADING */}
       <section className="border-b border-border bg-secondary/50">
-        <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-12 md:py-24">
+        <div className="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:grid-cols-12 md:py-20">
           <div className="md:col-span-5">
             <p className="eyebrow">Where I&apos;m heading</p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-[40px]">
@@ -289,7 +289,7 @@ function Home() {
 
       {/* 6. SELECTED HIGHLIGHTS */}
       <section className="border-b border-border">
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
+        <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div>
               <p className="eyebrow">Selected highlights</p>
@@ -312,7 +312,7 @@ function Home() {
 
       {/* 7. CTA */}
       <section className="border-b border-border">
-        <div className="mx-auto max-w-3xl px-6 py-24 text-center md:py-28">
+        <div className="mx-auto max-w-3xl px-6 py-16 text-center md:py-20">
           <p className="eyebrow">Let&apos;s talk</p>
           <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-tight md:text-[44px]">
             If you&apos;re building a team that values steady, thoughtful
