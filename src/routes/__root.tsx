@@ -169,7 +169,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "Person",
           name: "Muhammad Kashif",
-          jobTitle: "Technology Governance & Enterprise Architecture Advisor",
+          jobTitle: "Enterprise Technology Leader",
           email: "mailto:Engr.KashifArain@gmail.com",
           alumniOf: [
             { "@type": "CollegeOrUniversity", name: "SZABIST Karachi" },
