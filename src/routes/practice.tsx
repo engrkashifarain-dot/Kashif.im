@@ -66,7 +66,7 @@ const areas = [
 
 function Practice() {
   return (
-    <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+    <div className="mx-auto max-w-6xl px-6 py-12 md:py-16">
       <header className="max-w-3xl">
         <p className="eyebrow">What I do</p>
         <h1 className="mt-3 text-4xl font-semibold leading-tight tracking-tight md:text-5xl">
@@ -79,7 +79,7 @@ function Practice() {
         </p>
       </header>
 
-      <div className="mt-14 space-y-6">
+      <div className="mt-10 space-y-6">
         {areas.map((a) => (
           <section key={a.n} className="rounded-xl border border-border bg-card p-8 md:p-10">
             <div className="grid gap-8 md:grid-cols-12">
@@ -107,7 +107,7 @@ function Practice() {
         ))}
       </div>
 
-      <div className="mt-12 flex flex-wrap items-center gap-3 border-t border-border pt-10">
+      <div className="mt-10 flex flex-wrap items-center gap-3 border-t border-border pt-6">
         <Link to="/contact" className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-medium text-primary-foreground hover:bg-accent">Discuss a specific need →</Link>
         <Link to="/credentials" className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-3 text-sm font-medium text-foreground hover:border-accent hover:text-accent">See my full experience</Link>
       </div>
