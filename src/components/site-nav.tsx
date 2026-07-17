@@ -22,7 +22,7 @@ export function SiteNav() {
             <Link
               key={l.to}
               to={l.to}
-              className="text-[11px] sm:text-sm font-medium whitespace-nowrap text-foreground/70 transition-colors hover:text-accent"
+              className="text-[11px] sm:text-sm font-medium whitespace-nowrap text-primary transition-colors hover:text-accent"
             >
               {l.label}
             </Link>
