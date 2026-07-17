@@ -202,7 +202,7 @@ function Home() {
               </div>
             ))}
           </div>
-          <div className="mt-10 flex flex-wrap gap-2">
+          <div className="mt-10 grid grid-cols-2 gap-3">
             {[
               "Business Continuity",
               "Enterprise Infrastructure",
