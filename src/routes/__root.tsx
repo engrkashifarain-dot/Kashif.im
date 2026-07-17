@@ -77,19 +77,78 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Muhammad Kashif — Enterprise Technology Leader" },
-      {
-        name: "description",
-        content:
-          "Enterprise technology leader with 15+ years across government and industry. Focused on IT infrastructure, business continuity, and technology governance.",
-      },
-      { name: "author", content: "Muhammad Kashif" },
-      { property: "og:site_name", content: "Muhammad Kashif" },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
+  { charSet: "utf-8" },
+  { name: "viewport", content: "width=device-width, initial-scale=1" },
+
+  {
+    title: "Muhammad Kashif — Enterprise Technology Leader",
+  },
+
+  {
+    name: "description",
+    content:
+      "Engineer, MBA and enterprise technology leader with over a decade of experience across government and the IT industry.",
+  },
+
+  {
+    name: "author",
+    content: "Muhammad Kashif",
+  },
+
+  // Open Graph
+  {
+    property: "og:title",
+    content: "Muhammad Kashif — Enterprise Technology Leader",
+  },
+  {
+    property: "og:description",
+    content:
+      "Engineer, MBA and enterprise technology leader with over a decade of experience across government and the IT industry.",
+  },
+  {
+    property: "og:type",
+    content: "website",
+  },
+  {
+    property: "og:url",
+    content: "https://kashif.im",
+  },
+  {
+    property: "og:site_name",
+    content: "Muhammad Kashif",
+  },
+  {
+    property: "og:image",
+    content: "https://kashif.im/og-image.jpg",
+  },
+  {
+    property: "og:image:width",
+    content: "1200",
+  },
+  {
+    property: "og:image:height",
+    content: "630",
+  },
+
+  // Twitter / X
+  {
+    name: "twitter:card",
+    content: "summary_large_image",
+  },
+  {
+    name: "twitter:title",
+    content: "Muhammad Kashif — Enterprise Technology Leader",
+  },
+  {
+    name: "twitter:description",
+    content:
+      "Engineer, MBA and enterprise technology leader with over a decade of experience across government and the IT industry.",
+  },
+  {
+    name: "twitter:image",
+    content: "https://kashif.im/og-image.jpg",
+  },
+],
     links: [
       {
         rel: "stylesheet",
